@@ -58,9 +58,9 @@ class Graph(object):
     def add_node(self, node: Node):
         self.__nodes_id.append(node.id)
 
-    def is_connected(self   ):
+    def is_connected(self):
         pass
 
     @property
-    def is_oriented(self) -> bool:
+    def is_oriented(self ) -> bool:
         return self.__oriented
