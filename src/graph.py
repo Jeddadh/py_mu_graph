@@ -1,4 +1,8 @@
 class Node(object):
+    """
+    A python implementation of a graph node.
+    """
+
     node_id = 0
 
     def __init__(self):
@@ -43,8 +47,20 @@ class Node(object):
 
 
 class Graph(object):
-    def __init__(self):
+    """
+    A python implementation of a graph.
+    """
+
+    def __init__(self, is_oriented=False):
         self.__nodes_id = set()
+        self.__is_oriented = is_oriented
 
     def add_node(self, node: Node):
         self.__nodes_id.append(node.id)
+
+    def is_connected(self   ):
+        pass
+
+    @property
+    def is_oriented(self) -> bool:
+        return self.__oriented
