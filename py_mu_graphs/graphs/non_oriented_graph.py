@@ -1,4 +1,4 @@
-from src.graphs.node import Node
+from py_m_graphs.graphs.node import Node
 
 
 class NonOrientedGraph(object):
