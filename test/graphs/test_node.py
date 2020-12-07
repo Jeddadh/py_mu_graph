@@ -4,7 +4,7 @@ from src.graphs.node import Node
 
 
 class TestNodeMethods(unittest.TestCase):
-    node1 = Node(  )
+    node1 = Node(   )
     node2 = Node()
     node3 = Node()
 
