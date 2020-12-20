@@ -1,5 +1,7 @@
 class Graph(object):
-    def __init__(self, ):
+    def __init__(
+        self,
+    ):
         super(Graph, self).__init__()
         self.__nodes = {}  # dictionary containing all nodes in the graph.
         self.__node_id = 0  # a variable that we increment each time we add a node.
@@ -62,7 +64,6 @@ class Graph(object):
                     child_node = self.graph.get_node_by_id(child_id)
                     child_node.breadth_first(function)
 
-
     @property
     def root_node(self):
         return self.__root_node
@@ -86,20 +87,21 @@ class Graph(object):
 
     def add_root(self, node_value):
         if self.root_node is None:
-            raise ValueError("A graph root already exists. You can use set_root method.")
+            raise ValueError(
+                "A graph root already exists. You can use set_root method."
+            )
         root_node = Graph.Node(node_value, self)
         self.__root_node = root_node
 
     def set_root(self, node_id):
-        #TODO
+        # TODO
         pass
 
     def add_node(self, node_value, node_parent_id, edge_value):
-        #TODO
+        # TODO
         node_parent = self.__nodes[node_parent_id]
         node = Graph.Node(node_value, self)
         node_parent.add_adj(node)
 
     def breadth_first(self, function: callable):
         self.root_node.breadth_first(function)
-
